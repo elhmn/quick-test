@@ -9,7 +9,7 @@ import (
 	"github.com/rhysd/go-github-selfupdate/selfupdate"
 )
 
-var Version = "v0.0.0"
+var Version = "0.0.0"
 
 func selfUpdate(slug string) error {
 	selfupdate.EnableLog()
