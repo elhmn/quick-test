@@ -9,19 +9,19 @@ import (
 	"github.com/rhysd/go-github-selfupdate/selfupdate"
 )
 
-var Version = "0.0.0"
+var version = "0.0.0"
 
 func selfUpdate(slug string) error {
 	selfupdate.EnableLog()
 
-	previous := semver.MustParse(Version)
+	previous := semver.MustParse(version)
 	latest, err := selfupdate.UpdateSelf(previous, slug)
 	if err != nil {
 		return err
 	}
 
 	if previous.Equals(latest.Version) {
-		fmt.Println("Current binary is the latest version", Version)
+		fmt.Println("Current binary is the latest version", version)
 	} else {
 		fmt.Println("Update successfully done to version", latest.Version)
 		fmt.Println("Release note:\n", latest.ReleaseNotes)
@@ -49,7 +49,7 @@ func main() {
 	}
 
 	if *ver {
-		fmt.Println(Version)
+		fmt.Println(version)
 		os.Exit(0)
 	}
 
