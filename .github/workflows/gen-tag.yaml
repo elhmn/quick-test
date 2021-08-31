@@ -24,5 +24,3 @@ jobs:
       - name: Create next tag
         run: |
           tagname=$(svu next); git tag $tagname && git push origin $tagname
-        env:
-          GITHUB_TOKEN: ${{ secrets.GORELEASE_GITHUB_TOKEN }}
