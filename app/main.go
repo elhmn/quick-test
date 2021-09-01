@@ -38,7 +38,7 @@ func main() {
 	help := flag.Bool("help", false, "Show this help")
 	ver := flag.Bool("version", false, "Show version")
 	update := flag.Bool("update", false, "Try go-github-selfupdate via GitHub")
-	slug := flag.String("slug", "elhmn/quick-test", "Repository of this command")
+	slug := flag.String("slug", "elhmn/quick-test-release", "Repository of this command")
 
 	flag.Usage = usage
 	flag.Parse()
