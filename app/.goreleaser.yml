@@ -3,4 +3,4 @@ release:
   # Default is extracted from the origin remote URL or empty if its private hosted.
   github:
     owner: elhmn
-    name: quick-test
+    name: quick-test-release
