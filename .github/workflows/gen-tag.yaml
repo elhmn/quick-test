@@ -23,4 +23,4 @@ jobs:
 
       - name: Create next tag
         run: |
-          tagname=$(svu next); git tag $tagname && git push origin $tagname
+          tagname="app/$(svu next)"; git tag $tagname && git push origin $tagname
